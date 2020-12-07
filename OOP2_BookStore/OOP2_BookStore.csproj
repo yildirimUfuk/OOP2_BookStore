@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E9BF2BB-0E81-4368-BA5B-50F214B2CF9E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OOP2_BookStore</RootNamespace>
+    <AssemblyName>OOP2_BookStore</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddedBasketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddedBasketForm.Designer.cs">
+      <DependentUpon>AddedBasketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewProductFromDatabase.cs" />
+    <Compile Include="Admin.cs" />
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Book.cs" />
+    <Compile Include="BookAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookAddForm.Designer.cs">
+      <DependentUpon>BookAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookControl.Designer.cs">
+      <DependentUpon>BookControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookForm.Designer.cs">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookOperations.cs" />
+    <Compile Include="BookUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookUpdateForm.Designer.cs">
+      <DependentUpon>BookUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CdAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CdAddForm.Designer.cs">
+      <DependentUpon>CdAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CdOperations.cs" />
+    <Compile Include="CdUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CdUpdateForm.Designer.cs">
+      <DependentUpon>CdUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Currency.cs" />
+    <Compile Include="CurrencyInfo.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="ItemToPurchase.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Magazine.cs" />
+    <Compile Include="MagazineAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagazineAddForm.Designer.cs">
+      <DependentUpon>MagazineAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagazineControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MagazineControl.Designer.cs">
+      <DependentUpon>MagazineControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagazineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagazineForm.Designer.cs">
+      <DependentUpon>MagazineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MagazineOperations.cs" />
+    <Compile Include="MagazineUpdateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MagazineUpdateForm.Designer.cs">
+      <DependentUpon>MagazineUpdateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainFormPanelWithPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainFormPanelWithPicture.Designer.cs">
+      <DependentUpon>MainFormPanelWithPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicCD.cs" />
+    <Compile Include="MusicCdControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MusicCdControl.Designer.cs">
+      <DependentUpon>MusicCdControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicCdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MusicCdForm.Designer.cs">
+      <DependentUpon>MusicCdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Observer.cs" />
+    <Compile Include="PaymentDatailControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PaymentDatailControl.Designer.cs">
+      <DependentUpon>PaymentDatailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchasesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchasesForm.Designer.cs">
+      <DependentUpon>PurchasesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendEmail.cs" />
+    <Compile Include="ShoppingCard.cs" />
+    <Compile Include="ShoppingCartControlc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShoppingCartControlc.Designer.cs">
+      <DependentUpon>ShoppingCartControlc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingCartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShoppingCartForm.Designer.cs">
+      <DependentUpon>ShoppingCartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="UserSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserSettingsForm.Designer.cs">
+      <DependentUpon>UserSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VeritabaniIslemleri.cs" />
+    <EmbeddedResource Include="AddedBasketForm.resx">
+      <DependentUpon>AddedBasketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookAddForm.resx">
+      <DependentUpon>BookAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookControl.resx">
+      <DependentUpon>BookControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookForm.resx">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookUpdateForm.resx">
+      <DependentUpon>BookUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CdAddForm.resx">
+      <DependentUpon>CdAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CdUpdateForm.resx">
+      <DependentUpon>CdUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagazineAddForm.resx">
+      <DependentUpon>MagazineAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagazineControl.resx">
+      <DependentUpon>MagazineControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagazineForm.resx">
+      <DependentUpon>MagazineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MagazineUpdateForm.resx">
+      <DependentUpon>MagazineUpdateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFormPanelWithPicture.resx">
+      <DependentUpon>MainFormPanelWithPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicCdControl.resx">
+      <DependentUpon>MusicCdControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MusicCdForm.resx">
+      <DependentUpon>MusicCdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentDatailControl.resx">
+      <DependentUpon>PaymentDatailControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchasesForm.resx">
+      <DependentUpon>PurchasesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShoppingCartControlc.resx">
+      <DependentUpon>ShoppingCartControlc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShoppingCartForm.resx">
+      <DependentUpon>ShoppingCartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserSettingsForm.resx">
+      <DependentUpon>UserSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="UML.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addtobasket.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\büyüteç-icon-png-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoginRED.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginOrange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logo1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
